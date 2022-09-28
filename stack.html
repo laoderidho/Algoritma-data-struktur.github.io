@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    </div>
+
+    <script>
+        //method push dalam stack berfungsi untuk menambahkan property dalam array 
+        //method pop dalam stack berfungsi untuk menambahkan property dalam array
+
+        //contoh palindrome dan penggunaan stack
+        let letter = []; //ini adalah satck
+        let word = "racecar";
+        let rword = "";
+
+        //ini untuk memasukkan huruf per 1 karakter dalam stack
+        for (let i=0; i<word.length; i++){
+            letter.push(word[i]); //ambil semua karakter dari variable word dan salin ke dalam variable letter menjadi array 1 index 1 karakter
+        }
+        //ini untuk membalik karakter / palindrome dan memasukannya ke dalam variable rword
+        for(let i=0; i<word.length; i++){
+            rword += letter.pop(); //ambil semua karakter letter dari belakang dan masukkan ke dalam variable rword
+        }
+        //ini kondisi
+        if(rword === word){
+            console.log(`${word} is a palindrome`);
+        }else{
+            console.log(`${word} is not palindrome`);
+        }
+
+        console.log(rword)
+        console.log(word)
+        console.log(letter)
+        
+    </script>
+</body>
+</html>
