@@ -39,6 +39,46 @@
         console.log(word)
         console.log(letter)
         
+        let stack = function (){
+            this.count =0;
+            this.Storage = {};
+
+            this.push = function(value){
+                this.Storage[this.count] = value; //berfungsi untuk memasukkan parameter ke dalam variable storage
+                this.count++;
+            }
+
+            this.pop = function(){
+                if(this.count === 0){
+                    return undefined;
+                }
+                this.count--;
+                let result = this.Storage[this.count];
+                delete this.Storage[this.count];
+                return result;
+            }
+
+            this.size = function(){
+                return this.count;
+            }
+
+            this.peek = function(value){
+                return this.Storage[this.count-1];
+            }
+        }
+
+        let mystack = new stack();
+
+        mystack.push(1);
+        mystack.push(2);
+        console.log(mystack.peek());
+        console.log(mystack.pop());
+        console.log(mystack.peek());
+        mystack.push('freecodecamp');
+        console.log(mystack.size());
+        console.log(mystack.peek());
+        console.log(mystack.pop());
+        console.log(mystack.peek());
     </script>
 </body>
 </html>
