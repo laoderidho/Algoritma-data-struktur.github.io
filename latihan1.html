@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const golongan = (jam, golongan)=>{
+            let hasil =0;
+            this.jam = jam;
+            switch(golongan){
+                case 'A': 
+                hasil = jam * 5000;
+                break;
+                case 'B': 
+                hasil = jam * 7000;
+                break;
+                case 'C': 
+                hasil = jam * 8000;
+                break;
+                case 'D': 
+                hasil = jam * 10000;
+                break;
+            }
+            if (jam>48){
+                  hasil =  (jam - 48)* 4000 + hasil; 
+                }
+            return hasil;
+        }
+
+        console.log(golongan(48, 'A'));
+    </script>
+</body>
+</html>
