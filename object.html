@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj ={
+            name: 'Ridho',
+            age: 20,
+            sayHello : function(){
+                console.log(this.name)
+            }
+        }
+        obj.hobby = 'chess' //untuk menambahkan field baru dalam object 
+        delete obj.hobby //untuk menghapus field dalam object
+
+        console.log(obj.name) //untuk memanggil nama object dan nama field 
+        console.log(obj) //untuk memanggil nama object 
+        obj.sayHello();
+ 
+        //obj method  keys(), values(), entries()
+
+        let westeros = {
+            cersei: 'lanniser',
+            arya: 'stark',
+            jon: 'snow',
+            brienne: 'Tarth',
+            daeners: 'targaryen',
+            theon : 'greyJoy',
+            jorah : 'Mormont',
+            margaery : 'Tyrell',
+            sandor : 'clegane',
+            samwell : 'tarly',
+            ramsay : 'bolton'
+        }
+
+        let keys = Object.keys(westeros)//memanggil semua object
+    </script>
+</body>
+</html>

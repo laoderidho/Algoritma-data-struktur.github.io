@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1,2,3, 'Fahreza', 5] //ini untuk deklarasi array
+        console.log(arr[0]) //ini untuk memanggil array. tanda [i] dengan i ddalah index ke berapa yang akan di panggil
+        
+        arr.push(4)  //ini adalah method untuk menambahkan array dari index yang paling akhirdan unshift adalah method untuk menambahkan array dari index yang paling awal
+        arr.pop() //ini adalah method untuk menghilangkan array dari index yang paling akhir dan shift menghilangkan index yang paling awal 
+        // for(const item of arr){
+        //     console.log(item)
+        // }
+
+        //array method map, filter, reduce
+
+        const map = arr.map(e=> e); //untuk memanggil semua array, bisa juga untuk memberi perintah pada setiap index array, sangat penting untuk dom
+        console.log(map)
+        const filter = arr.filter(e=> e>2); //untuk menyaring array agar dalam kondisi yang terpenuhi yang di panggil
+        console.log(filter)
+        const reduce = arr.reduce((acc, cur)=>{ 
+            return acc + cur; //untuk menambahkan / mengalikan/ mengurangi semua array
+        })
+        console.log(reduce)
+    </script>
+</body>
+</html>
