@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const map = new Map([['a', 1],['b', 2]]);
+        /*map hampir seperti array 2 dimensi di mana 1 array memiliki 2 array lain yaitu key dan value
+          yang berpasangan key adalah nilai index dan value adalah nilai asli   
+        */
+        map.set('c', 3)
+        map.delete('c')
+        for(const [key, value] of map){
+            console.log(`Key ke ${key} dengan values ${value}`)
+        }
+    </script>
+</body>
+</html>

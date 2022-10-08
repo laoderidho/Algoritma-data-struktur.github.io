@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+    </div>
+
+    <script>
+        //queue mempunyai sistem first in first out yang artinya elemen yang di tambahkan pertama dan di ambil pertama juga
+        class queue{
+            constructor(){
+                this.item = [];
+            }
+            enqueque(element){
+                this.item.push(element);
+            }
+            dequeque(){
+                this.item.shift();
+            }
+            isEmpty(){
+                return this.item.length === 0;
+            }
+            peek(){
+                if(!this.isEmpty()){
+                    return this.item[0];
+                }
+                return null
+            }
+            size(){
+                return this.item.length;
+            }
+            print(){
+             console.log(this.item.toString());
+            }
+        }
+
+        const queue1 = new queue();
+
+        queue1.enqueque(10);
+        queue1.enqueque(12);
+        queue1.enqueque(11);
+        queue1.enqueque(13);
+        queue1.dequeque(); //mengambil / menghilangkan element pertama dalam array
+        console.log(queue1.print())
+        console.log(queue1.isEmpty());
+
+    </script>
+</body>
+</html>

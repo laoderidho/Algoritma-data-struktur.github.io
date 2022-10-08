@@ -14,7 +14,48 @@
     <script>
         //method push dalam stack berfungsi untuk menambahkan property dalam array 
         //method pop dalam stack berfungsi untuk menambahkan property dalam array
+        //stack bersifat first in last out yang artinya di tambahkan pertama dan di keluarkan terakhir sama seperti buku
+        
 
+        class Stack {
+            constructor(){
+                this.item =[];
+            }
+            push(element){
+                this.item.push(element);
+            }
+            pop(){
+                return this.item.pop()
+            }
+            peek(){
+               return this.item[this.item.length -1]
+            }
+            isEmpty(){
+                return this.item.length ===0;
+            }
+            size(){
+                return this.item.length
+            }
+            print(){
+                console.log(this.item.toString())
+            }
+        }
+
+        const stack1 = new Stack()
+        console.log(stack1.isEmpty());
+
+        stack1.push(10);
+        stack1.push(2);
+        stack1.push(13);
+        stack1.push(31);
+        stack1.push(1);
+        stack1.push(5);
+        stack1.push(12);
+        console.log(stack1.size())
+        console.log(stack1.print())
+
+        console.log(stack1.pop());
+        console.log(stack1.peek()); 
         //contoh palindrome dan penggunaan stack
         let letter = []; //ini adalah array kosong
         let word = "racecar";
