@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nama">Nama Anda</label>
+    <input type="text" id="name">
+    <button id="input">Klik sini untuk mencari</button>
+    <p>Ridho</p>
+    <p>reza</p>
+    <p>fikram</p>
+    <p>affa</p>
+    <p>markus</p>
+    <p>rahul</p>
+    <p>fistaja</p>
+
+
+    <script>
+        const p = Array.from(document.querySelectorAll('p')).map(el => el.textContent) //untuk menciptakan array 
+        // di bawah ini adalah function algoritma linear search
+        const linearSearch = (arr, val)=>{
+            for(let i= 0; i< arr.length; i++){
+                if(arr[i]===val){ //ini conditional yang artinya jika ada index array yang isinya sama dengan value maka di sinilah kodenya di run
+                    return `ini di temukan di index ke ${i}`
+                }
+            }
+            return `ini tidak di temukan`
+        }
+
+        const tombol = document.getElementById('input')
+        .addEventListener('click',el=>{
+            const name = document.getElementById('name') 
+            const element = p
+            const search = linearSearch(p, name.value) //mengambil function search 
+            return alert(search)
+        })
+    </script>
+</body>
+</html>
