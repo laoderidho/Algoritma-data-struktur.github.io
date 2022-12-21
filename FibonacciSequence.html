@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const fibbonaci = n=>{
+            const fib = [0, 1] //ini adalah array pertama
+            for(let i=2; i<n; i++){
+                fib[i] = fib[i-1] + fib[i-2] //ini menjelaskan untuk menentukan array selanjutnya maka = index array di belakang di tambah dengan index array di bagian belakang nya lagi
+            }
+            return fib;
+        }
+
+        console.log(fibbonaci(2))
+        console.log(fibbonaci(3))
+        console.log(fibbonaci(7))
+    </script>
+</body>
+</html>
