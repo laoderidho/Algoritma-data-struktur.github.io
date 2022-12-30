@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        const sum =(arr, target)=>{
+            let awal = 0;
+            let akhir = arr.length-1;
+
+            while (awal <= akhir){
+                let total = Math.floor((awal+akhir)/2)
+                return arr[total]
+            }
+        }
+
+
+        const arr = ['Ridho', 'fahreza', 'kisame', 'La Ode', 'Kira'];
+        
+        console.log(sum(arr))
+    </script>
+</body>
+</html>
