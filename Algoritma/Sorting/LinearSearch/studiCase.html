@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="tes">
+    <button id="tes2">Klik</button>
+
+    <h1 class="tes1">Hello</h1>
+    <h1 class="tes1">Ridho</h1>
+    <h1 class="tes1">Fahreza</h1>
+    <h1 class="tes1">rawia</h1>
+    <h1 class="tes1">Keladi</h1>
+    <h1 class="tes1">fisaria</h1>
+    <h1 class="tes1">kemenui</h1>
+
+    <script>
+        const linear = (el, target) => {
+            for (let i = 0; i < el.length; i++) {
+                if (el[i] == target) {
+                    return `Ini di temukan di Indeks ke ${i} dengan data ${el[i]}`
+                }
+                
+            }
+            return `Ini tidak di temukan`
+        }
+        
+        
+        const klikMyButton = document.getElementById('tes2')
+        .addEventListener('click', el=>{
+            const name = document.getElementById('tes').value;
+            const arr = Array.from(document.querySelectorAll('.tes1')).map(el=> el.textContent)
+            const sumLinear = linear(arr, name)
+            alert(sumLinear)
+        })
+    </script>
+</body>
+</html>
