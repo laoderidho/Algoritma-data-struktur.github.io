@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="" id="tes1">
+    <button id="tes2">Klik Untuk Mencari</button>
+     <p class="tes">arif</p>
+     <p class="tes">bagas</p>
+     <p class="tes">citra</p>
+     <p class="tes">davin</p>
+     <p class="tes">geu</p>
+     <p class="tes">hara</p>
+     <p class="tes">jasa</p>
+
+     <script>
+        const binarySearh = (arr, target) => {
+                let awal = 0;
+                let akhir = arr.length - 1
+                while (awal <= akhir) {
+                    let middle = Math.floor((awal + akhir) / 2)
+                    if (arr[middle] === target) {
+                        return `ini di temukan di indeks ${middle} dengan isi ${arr[middle]}`
+                    }
+                    else if (arr[middle] < target) {
+                        awal = middle + 1
+                    } else {
+                        akhir = middle - 1
+                    }
+                }
+            }
+        const button = document.getElementById('tes2')
+        .addEventListener('click' ,el=>{
+            const p = Array.from(document.getElementsByClassName('tes')).map(el=> el.textContent)
+            const input = document.getElementById('tes1').value;
+            alert(binarySearh(p, input))
+        })
+     </script>
+</body>
+</html>
