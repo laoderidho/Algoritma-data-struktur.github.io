@@ -23,15 +23,29 @@ class LinkedList {
         this.head = null;
         this.size = 0
     }
-    //insert Linkedlist
+    //insertfirst Linkedlist
     insertNode(data){
         this.head = new Node(data, this.head)
+    }
+
+    //insertlastNode
+    insertLast(data){
+        let node = new Node(data);
+        let current;
+        if(!this.head){
+            this.head = node;
+        }else{
+            current = this.head;
+            while(current.next){
+                current = current.next
+            }
+            current.next = node;
+        }
     }
 
     //print list Data
     printData(){
         let current = this.head;
-        
         while(current){
             console.log(current.data)
             current = current.next
